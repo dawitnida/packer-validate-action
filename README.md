@@ -32,7 +32,7 @@ action "filter-open-synced-pr" {
 
 # For single template (eg. dockers dir contains *.json template)
 action "packer-validate-docker-image-template" {
-  uses = "dawitnida/packer-github-actions/validate@master"
+  uses = "dawitnida/packer-validate-action@master"
   needs = "filter-open-synced-pr"
   secrets = [
     "GITHUB_TOKEN",
@@ -50,7 +50,7 @@ workflow "packer validate template-x with var-file" {
 
 # For specific template file (eg. packer-template-x.json) with var-file (global-vars.json) arg
 action "packer-validate-template-x" {
-  uses = "dawitnida/packer-github-actions/validate@master"
+  uses = "dawitnida/packer-validate-action@master"
   needs = "filter-open-synced-pr"
   secrets = [
     "GITHUB_TOKEN",
@@ -70,7 +70,7 @@ workflow "packer validate template-y without arg" {
 
 # For specific template file (eg. packer-template-y.json) without any args
 action "packer-validate-template-y" {
-  uses = "dawitnida/packer-github-actions/validate@master"
+  uses = "dawitnida/packer-validate-action@master"
   needs = "filter-open-synced-pr"
   secrets = [
     "GITHUB_TOKEN",
