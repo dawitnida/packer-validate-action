@@ -2,8 +2,8 @@ FROM hashicorp/packer:1.3.5
 
 LABEL "com.github.actions.name" = "Packer validate"
 LABEL "com.github.actions.description" = "Validate packer template file in a directory"
-LABEL "com.github.actions.icon" = "check-circle"
-LABEL "com.github.actions.color" = "blue"
+LABEL "com.github.actions.icon"="check-circle"
+LABEL "com.github.actions.color"="blue"
 
 LABEL "repository" = "https://github.com/dawitnida/packer-validate-action"
 LABEL "homepage" = "https://github.com/dawitnida/packer-validate-action"

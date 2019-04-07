@@ -95,6 +95,5 @@ action "packer-validate-template-y" {
 
 [packer-validate-doc]:  <https://www.packer.io/docs/commands/validate.html>
 [packer-actions-demo]:  <https://github.com/dawitnida/packer-actions-demo>
-[packer-actions-demo]:  <https://github.com/dawitnida/packer-actions-demo>
 [github-actions]:       <https://github.com/features/actions>
 [packer-doc]:           <https://www.packer.io/docs/index.html>
