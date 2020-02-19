@@ -10,6 +10,28 @@ Check out the [packer validate command][packer-validate-doc] for further referen
 
 ## Usage
 
+### YAML style
+
+To configure the action simply add the following lines to your .github/workflows/packer-validate.yml workflow file:
+
+```
+name: Validate packer template file in a directory
+
+on:
+  pull_request:
+jobs:
+  packer_validate:
+    runs-on: hashicorp/packer:1.5.4
+    steps:
+      - name: Packer validate template-y without argument
+        uses: dawitnida/packer-github-actions/validate@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TEMPLATE_FILE_NAME: ${{ env.TEMPLATE_FILE_NAME }}
+```
+
+### Legacy
+
 To check this in action, please check [Packer actions demo project][packer-actions-demo] with a collection
 of sample packer template files. 
 
@@ -89,6 +111,11 @@ action "packer-validate-template-y" {
 
 **Figure 3.** *Packer validate complete check list diagram*
 ![checks-list-diagram](assets/action-results.png)
+
+
+## License
+
+The Dockerfile and associated scripts and documentation in this project are released under the [Apache-2.0 License](LICENSE).
 
 ### Author
 [Dawit Nida](https://github.com/dawitnida)
