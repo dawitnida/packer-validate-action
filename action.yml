@@ -1,4 +1,4 @@
-name: 'Packer validate'
+name: 'packer-validate'
 author: 'Dawit Nida <dawit@dawitnida.com>'
 description: 'Validate packer template file in a directory'
 runs:
