@@ -1,4 +1,6 @@
 #!/bin/sh
+
+
 set -e
 
 # Set the working directory for the template
